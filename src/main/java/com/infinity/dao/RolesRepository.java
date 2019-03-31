@@ -2,9 +2,9 @@ package com.infinity.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import com.infinity.model.Role;
 
-import com.infinity.model.Roles;
 @Repository
-public interface RolesRepository extends JpaRepository<Roles, Integer> {
+public interface RolesRepository extends JpaRepository<Role, Integer> {
 
 }

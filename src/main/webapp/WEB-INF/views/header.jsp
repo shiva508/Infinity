@@ -13,11 +13,9 @@
 <meta charset="ISO-8859-1">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
+<title></title>
 </head>
-<%-- <link
-	href="${pageContext.request.contextPath}/component/css/bootstrap.css"
-	rel="stylesheet"> --%>
+
 <link
 	href="${pageContext.request.contextPath}/component/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -31,25 +29,27 @@
 	src="${pageContext.request.contextPath}/component/js/bootstrap.min.js"></script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/component/js/header.js"></script>
+<link href="${pageContext.request.contextPath}/component/css/style.css"
+	rel="stylesheet">
 <body>
 	<header id="top" class="navbar navbar-static-top bs-docs-nav"
 		role="banner">
-		<%-- <div id="headerBg">
+		<div id="headerBg">
 			<div class="container">
 				<div class="fleft appName">
-					JDScribe Web Portal<br />
+					H!<br />
 					<p class="welcomeSection slidePopUp">
 						Welcome, <span slidePopUp id="username">shiva</span>
 				</div>
-				<div class="fright">
+				<%-- <div class="fright">
 					<div class="deereLogo">
 						<img class="img-responsive" src="${pageContext.request.contextPath}/component/images/logo.png" >
 					</div>
-				</div>
+				</div> --%>
 				<div class="clr"></div>
 
 			</div>
-		</div> --%>
+		</div>
 
 		<!-- Navigation -->
 
@@ -63,9 +63,9 @@
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"
-						class="header-link"><img src="${pageContext.request.contextPath}/component/images/homeIcon.png" class="header-link" />
-					</a>
+					<a class="navbar-brand" href="#" class="header-link"><img
+						src="${pageContext.request.contextPath}/component/images/homeIcon.png"
+						class="header-link" /> </a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,7 +75,7 @@
 
 						<li class="active dropdown"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown" role="button"
-							aria-expanded="false">Metadata Management <span class="caret"></span>
+							aria-expanded="false">H!-Adda <span class="caret"></span>
 						</a>
 							<ul class="dropdown-menu" role="menu">
 								<security:authorize access="hasAnyRole('ADMIN')">
@@ -94,7 +94,7 @@
 
 							</ul></li>
 
-
+<security:authorize access="hasAnyRole('ADMIN')">
 						<li class="active dropdown"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown" role="button"
 							aria-expanded="false">Admin <span class="caret"></span>
@@ -103,40 +103,37 @@
 								<li><a href="#" class="header-link">Product Management</a></li>
 								<li><a href="#" class="header-link">Announcements</a></li>
 								<li><a href="#" class="header-link">Users</a></li>
-							</ul>
-							</li>
+							</ul></li>
+</security:authorize>
 
+						<li><a href="#" class="header-link">H!-Tutorials</a></li>
+						<li><a href="#" class="header-link">Shout for help</a></li>
 
-						<li><a href="#" class="header-link">View &amp; Download
-								Report</a></li>
-								
-								
-								<li><a href="#" class="header-link"><img
-					src="${pageContext.request.contextPath}/component/images/shiva.jpg"
-					class="img-circle" alt="Cinque Terre" width="50" height="50"></a></li>
-
-						<%-- <security:authorize access="hasRole('System Admin')">	
-								<li><a href="${createAnnouncementUrl}" class="header-link">Announcements</a></li>	
-							</security:authorize> --%>
+						<li><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-expanded="false"><img
+								src="${pageContext.request.contextPath}/component/images/shiva.jpg"
+								class="img-circle" alt="Cinque Terre" width="50" height="50"><span
+								class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><form:form
+										action="${pageContext.request.contextPath}/logout"
+										method="POST">
+										<input class="btn btn-lg btn-primary btn-block" type="submit"
+											value="Logout">
+									</form:form></li>
+									<li><a href="#" class="header-link">Hi-Profile</a></li>
+							</ul></li>
 					</ul>
 				</div>
+
 				<!-- /.navbar-collapse -->
 			</div>
 			<!-- /.container-fluid -->
 		</nav>
 		<!-- <div class="loading" id="loading"></div>		 -->
 	</header>
-	
-	
-	<footer class="bs-docs-footer" role="contentinfo">
-		<div class="container">
-			<div class="footer">
 
-				<div class="fright">Copyright &copy; 2015 Deere & Company. All
-					Rights Reserved.</div>
-				<div class="clr"></div>
-			</div>
-		</div>
-	</footer>
+
+
 </body>
 </html>

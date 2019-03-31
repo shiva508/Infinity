@@ -19,7 +19,7 @@ public class Address {
 	private String distrct;
 	@ManyToOne
 	@JoinColumn(name="USER_ID",nullable=false)
-	public User user;
+	public Users user;
 
 	public Address() {
 	}
@@ -56,11 +56,11 @@ public class Address {
 		this.distrct = distrct;
 	}
 
-	public User getUser() {
+	public Users getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(Users user) {
 		this.user = user;
 	}
 

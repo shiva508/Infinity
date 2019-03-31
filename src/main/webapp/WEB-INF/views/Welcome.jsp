@@ -17,7 +17,7 @@
 <body>
 <jsp:include page="header.jsp" flush="true"></jsp:include>
 	<br>
-	<h1>Welcome to INFINITY <security:authentication property="principal.username" /> </h1>
+	<%-- <h1>Welcome to INFINITY <security:authentication property="principal.username" /> </h1> --%>
 	<nav id="sidebar-wrapper">
 	<ul class="sidebar-nav">
 		<li class="sidebar-brand"><a class="js-scroll-trigger"
@@ -48,6 +48,6 @@
 	<security:authentication property="principal.username" />
 	ROLES:
 	<security:authentication property="principal.authorities" /> --%>
-	
+	<jsp:include page="Footer.jsp" flush="true"></jsp:include>
 </body>
 </html>

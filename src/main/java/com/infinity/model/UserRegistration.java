@@ -1,6 +1,7 @@
 package com.infinity.model;
 
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,7 +11,7 @@ import javax.persistence.Table;
 @Table
 public class UserRegistration {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	/*@GeneratedValue(strategy = GenerationType.IDENTITY)*/
 	private Integer userRegistrationId;
 	private String firstName;
 	private String lastName;

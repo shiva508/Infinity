@@ -1,7 +1,5 @@
 package com.infinity.mapper;
 
-import javax.crypto.CipherInputStream;
-
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.converter.ConverterFactory;
 import ma.glasnost.orika.converter.builtin.DateToStringConverter;

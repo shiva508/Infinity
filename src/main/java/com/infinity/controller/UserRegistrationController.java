@@ -2,16 +2,14 @@ package com.infinity.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import com.infinity.dao.UserRegistrationRepository;
 import com.infinity.form.UserForm;
-import com.infinity.model.User;
 import com.infinity.model.UserRegistration;
 import com.infinity.service.UserRegistrationService;
 import com.infinity.service.UserService;

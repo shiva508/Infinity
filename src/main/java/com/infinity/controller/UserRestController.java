@@ -1,20 +1,13 @@
 package com.infinity.controller;
 
-import java.util.Optional;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.websocket.server.PathParam;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.infinity.exception.UserNotFoundException;
 import com.infinity.form.UserForm;
-import com.infinity.model.User;
 import com.infinity.service.UserService;
 
 @RestController
