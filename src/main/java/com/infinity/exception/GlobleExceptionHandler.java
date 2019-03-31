@@ -28,7 +28,8 @@ public class GlobleExceptionHandler {
 		res.setTimeStamp(new Date());
 		return new ResponseEntity<ProductExceptionResponse>(res,HttpStatus.NOT_FOUND);
 	}
-	@ExceptionHandler(Exception.class)
+	@SuppressWarnings("rawtypes")
+	@ExceptionHandler
 	public ResponseEntity<Object> internalExceptionHandler(Exception ex){
 		ProductExceptionResponse res=new ProductExceptionResponse();
 		res.setMessage(ex.getMessage());

@@ -17,15 +17,12 @@ public class InmemorySpringScuryConfig extends WebSecurityConfigurerAdapter {
 		.withUser(users.username("shiva").password("shiva").roles("ADMIN","EMPLOYEE"))
 		.withUser(users.username("satish").password("satish").roles("CEO","MANAGER","EMPLOYEE"))
 		.withUser(users.username("ravi").password("ravi").roles("RND","MANAGER","EMPLOYEE"));
-		
 	}
 		
 		@Override
 			protected void configure(HttpSecurity http) throws Exception {
 			http.authorizeRequests()
-					/*
-					 * .anyRequest().authenticated()//used to authenticate only on user
-					 */
+					/*.anyRequest().authenticated()*/ //used to authenticate only on user 
 			.antMatchers("/").hasRole("EMPLOYEE")
 			.antMatchers("/admin/**").hasRole("ADMIN")
 			.antMatchers("/ceo/**").hasRole("CEO")

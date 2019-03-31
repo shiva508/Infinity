@@ -43,25 +43,14 @@
 								.click(
 										function() {
 											$("#maintable tbody tr")
-													.each(
-															function() {
-																var mobileNumberType = $(
-																		this)
-																		.find(
-																				".mobileNumberType")
-																		.val();
-																var mobileNumber = $(
-																		this)
-																		.find(
-																				".mobileNumber")
-																		.val();
-																console
-																		.log(mobileNumber);
+													.each(function() {
+																var mobileNumberType = $(this).find(".mobileNumberType").val();
+																var mobileNumber = $(this).find(".mobileNumber").val();
+																console.log(mobileNumber);
 																var obj = {};
 																obj.mobileNumberType = mobileNumberType;
 																obj.mobileNumber = mobileNumber;
-																phoneNumbers
-																		.push(obj);
+																phoneNumbers.push(obj);
 															})
 											console.log(phoneNumbers)
 
@@ -91,22 +80,6 @@
 												}
 											});
 								});
-						/* $("#add_new").click(function() {
-
-							$("#maintable").each(function() {
-								
-								var tds = '<tr>';
-								jQuery.each($('tr:last td', this), function() {
-									tds += '<td>' + $(this).html() + '</td>';
-								});
-								tds += '</tr>';
-								if ($('tbody', this).length > 0) {
-									$('tbody', this).append(tds);
-								} else {
-									$(this).append(tds);
-								}
-							});
-						}); */
 					});
 </script>
 <body>
